@@ -24,13 +24,14 @@ export default class LoginPage extends Component {
                     <title>K1logram</title>
                 </head>
                 <main className="log-in">
-                    <header className="log-in__welcome">
-                        <p className="log-in__welcome-text">
-                        Добро пожаловать в наш мессенджер!<br />K1logram -
-                        общение без границ.
-                        </p>
-                    </header>
+                    <img className="log-in__logo" src="static/logoKilogram.svg" alt="Логотип" />
                     <Button btnParams={logIn} />
+                    <p className="log-in__creators creators_first">DarkwingDuck</p>
+                    <p className="log-in__creators creators_second">spt30</p>
+                    <p className="log-in__creators creators_third">ArtyMgn</p>
+                    <p className="log-in__creators creators_fourth">qpaul</p>
+                    <p className="log-in__creators creators_fifth">Griboedoff</p>
+                    <p className="log-in__creators creators_sixth">LazzyM1nd</p>
                 </main>
             </React.Fragment>
         );

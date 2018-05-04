@@ -3,19 +3,124 @@
     --height: 40vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     width: 30vw;
     height: var(--height);
     margin: auto;
     margin: calc(50vh - var(--height) / 2) auto;
     border-radius: 10px;
-    background: var(--neutral-color);
 }
 
-.log-in__welcome {
-    text-align: center;
+.log-in__logo {
+    width: 60px;
+    margin: 0 auto;
 }
 
 .log-in__github-link {
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
+    transition: all 300ms ease;
+}
+
+.log-in__github-link:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: red;
+    border-radius: 15px;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transition: all 0ms ease;
+}
+
+.log-in__github-link:focus {
+    box-shadow: none;
+}
+
+.log-in__github-link:hover {
+    color: white;
+}
+
+.log-in__github-link:hover:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background:red;
+    border: 1px solid rgb(187, 29, 29);
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+    transition: all 300ms ease;
+  }
+
+.custom-button {
+    border: 1px solid rgb(187, 29, 29);
+    background-color: rgb(255, 233, 233);
+}
+
+.log-in__creators {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .log-in__creators { 
+        display: block;
+        position: absolute;
+        animation-name: show;
+        animation-iteration-count: 2;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-timing-function: ease-out;
+        opacity: 0;
+        font-size: 20px;
+    }
+
+    .creators_first {
+        top: 10%;
+        left: 10%;
+
+    }
+
+    .creators_second {
+        right: 20%;
+        animation-delay: 2s;
+    }
+
+    .creators_third {
+        top: 50%;
+        left: 15%;
+        animation-delay: 4s;
+    }
+
+    .creators_fourth {
+        top: 20%;
+        left: 45%;
+        animation-delay: 6s;
+    }
+
+    .creators_fifth {
+        top: 70%;
+        left: 50%;
+        animation-delay: 8s;
+    }
+
+    .creators_sixth {
+        top: 50%;
+        right: 20%;
+        animation-delay: 10s;
+    }
+
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            color: white;
+          }
+        
+          to {
+            opacity: 1;
+            color: red;
+          }
+    }
 }
